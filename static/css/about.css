@@ -1,0 +1,51 @@
+    .about-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-container h2 {
+      color: #ff5722;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-container p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    .about-container ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .about-container li {
+      background: #ffe0b2;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #757575;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }

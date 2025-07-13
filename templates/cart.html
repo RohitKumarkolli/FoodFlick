@@ -1,0 +1,72 @@
+{% extends "main.html" %}
+{% load static %}
+{% block details %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+  <main class="dashboard-container">
+    <section class="welcome">
+      <h2>Welcome back, <span id="userName">[User's Name]</span>!</h2>
+    </section>
+    <section class="orders">
+      <h3>Your Orders</h3>
+      <table class="orders-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>🍕 Pizza</td>
+            <td>$10.00</td>
+            <td>1</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>🍔 Burger</td>
+            <td>$8.00</td>
+            <td>2</td>
+            <td>$16.00</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>🥗 Salad</td>
+            <td>$5.00</td>
+            <td>1</td>
+            <td>$5.00</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>🍰 Cake</td>
+              <td>$6.00</td>
+              <td>1</td>
+              <td>$6.00</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>🍕 Pizza</td>
+            <td>$10.00</td>
+            <td>1</td>
+            <td>$10.00</td>
+          </tr>
+            <tr>
+                <td>6</td>
+                <td>🍔 Burger</td>
+                <td>$8.00</td>
+                <td>2</td>
+                <td>$16.00</td>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="profile-management">
+      <button onclick="window.history.back()" class="btn back">🔙 Back</button>
+      <button class="btn logout" onclick="window.location.href='{% url "logout" %}'">Logout</button>
+    </section>
+  </main>
+{% endblock %}

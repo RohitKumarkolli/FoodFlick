@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-image: url('food.png'); /* or your own food pattern */
+  background-color: #fff5f5;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: orangered;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('https://source.unsplash.com/1600x800/?food');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+  }
+  
+  .hero-content h1 {
+    color:rgb(238, 236, 236);
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .hero-content button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background: orangered;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .hero-content button:hover {
+    background: orangered;
+  }
+  
+  /* Features */
+  .features {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .features h2 {
+    margin-bottom: 30px;
+  }
+  
+  .feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background: #fefefe;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    font-size: 18px;
+  }
+  
+  /* Restaurants */
+  .restaurants {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .restaurant-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .restaurant-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  .restaurant-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .restaurant-card h3 {
+    margin: 15px;
+  }
+  
+  .restaurant-card p {
+    margin: 0 15px 20px;
+    color: #666;
+  }
+  
+  .restaurant-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+/* Feature grid layout - responsive for 6 cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  justify-items: center;
+  align-items: start;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 180px;
+  height: 150px;
+  perspective: 1000px;
+  transition: all 0.4s ease;
+  overflow: visible;
+}
+
+.flip-card:hover {
+  height: 260px; /* Slightly more than before */
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.flip-front {
+  background-color: orangered;
+  color: white;
+}
+
+.flip-back {
+  background-color: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  font-size: 15px;  /* was 14px */
+  padding: 20px;
+}
+
+.animated-heading {
+  font-size: 40px; /* Bigger font size */
+  font-weight: bold;
+  color: orangered;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid orangered; /* blinking cursor */
+  width: 0;
+  animation: typing 4s steps(14) 1s infinite alternate, blink 0.7s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15ch; /* Length of 'Why FoodFlick?' */
+  }
+}
+
+/* Cursor blinking */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

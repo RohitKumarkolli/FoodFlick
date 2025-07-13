@@ -1,0 +1,54 @@
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff5e6;
+      color: #333;
+      background-image: url('../image/ind_pic/food.png');
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: orangered;
+      padding: 15px;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #ff6600;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: orangered;
+      color: white;
+      padding: 12px;
+      margin-top: 20px;
+      width: 100%;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e65c00;
+    }

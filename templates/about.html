@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% load static %}
+{% block details %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <main class="about-container">
+    <h2>About Flick</h2>
+    <p><strong>Food Flick</strong> is your ultimate food delivery solution, crafted to bring delicious meals from your favorite restaurants right to your doorstep. Whether you're craving spicy street food, a wholesome salad, or indulgent desserts, Flink makes it all just a few clicks away.</p>
+
+    <p>Founded in 2025, our mission is to revolutionize the way people experience food delivery — fast, convenient, and full of flavor. We connect customers with local chefs and restaurants through an intuitive and vibrant platform.</p>
+
+    <p>Why choose Flick?</p>
+    <ul>
+      <li>🚀 Lightning-fast delivery</li>
+      <li>📱 Easy-to-use website and interface</li>
+      <li>🍔 Wide range of cuisines</li>
+      <li>🔒 Secure payments</li>
+      <li>🌟 Friendly customer support</li>
+    </ul>
+
+    <a href="{% url "dashboard" %}" class="back-button">← Back to Home</a>
+  </main>
+{% endblock  %}

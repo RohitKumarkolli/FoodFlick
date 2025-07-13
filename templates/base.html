@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodFlick - Home</title>
+  <script src="{% static 'js/script.js' %} "></script>
+</head>
+<body style="background-image: url('{% static "image/ind_pic/food.png" %} '); ">
+  <header class="navbar">
+    <div class="logo">🍽️ FoodFlick</div>
+    <div class="nav-bar">
+      <a href="{% url "home" %} " target="mainFrame">Home</a>
+      <a href="{% url "login" %}" target="mainFrame">Login</a>
+      <a href="{% url "signup" %}" target="mainFrame">Signup</a>
+    </div>
+  </header>
+{% block content %}{% endblock content %}
+  <footer>
+    <p>&copy; 2025 <strong> FoodFlick </strong>. All rights reserved.</p>
+  </footer>
+</body>
+</html>
