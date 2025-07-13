@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static "css/profile.css" %}">
+  <title>Profile</title>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="sidebar">
+      <img src="../static/image/ind_pic/pro.jpg" alt="Profile Image">
+      <div>
+        <h2>John Doe</h2>
+        <p>AI/ML Student • Loves Design • 🍊Theme Forever</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Back to Home Button -->
+      <div class="actions" style="justify-content: flex-start; margin-bottom: 20px;">
+        <button onclick="window.location.href='{% url "dashboard" %}'">⬅ Back to Home</button>
+      </div>
+      <div class="section">
+        <h3>Personal Info</h3>
+        <div class="info-line"><span class="label">Full Name:</span><span class="value">Johnathan Doe</span></div>
+        <div class="info-line"><span class="label">DOB:</span><span class="value">April 15, 2003</span></div>
+        <div class="info-line"><span class="label">Gender:</span><span class="value">Male</span></div>
+        <div class="info-line"><span class="label">Nationality:</span><span class="value">Indian</span></div>
+      </div>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <div class="info-line"><span class="label">Email:</span><span class="value">john.doe@example.com</span></div>
+        <div class="info-line"><span class="label">Phone:</span><span class="value">+91 98765 43210</span></div>
+        <div class="info-line"><span class="label">Address:</span><span class="value">123 Orange Street, Mumbai</span></div>
+        <div class="info-line"><span class="label">Website:</span><span class="value">www.johndoe.me</span></div>
+      </div>
+
+      <div class="section">
+        <h3>Social Links</h3>
+        <ul>
+          <li>LinkedIn: <a href="#" style="color:#ff6600;">linkedin.com/in/johndoe</a></li>
+          <li>GitHub: <a href="#" style="color:#ff6600;">github.com/johndoe</a></li>
+          <li>Twitter: <a href="#" style="color:#ff6600;">@doe_works</a></li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <button onclick="window.location.href='{% url "profile" %}'">✏️ Edit Profile</button>
+        <button onclick="window.location.href='{% url "settings" %}'">⚙️ Settings</button>
+        <button onclick="window.location.href='{% url "home" %}'">🚪 Logout</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

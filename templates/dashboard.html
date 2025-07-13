@@ -1,0 +1,119 @@
+{% extends "main.html" %}
+{% load static %}
+{% block details %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<script src="{% static 'js/main.js' %}"></script>
+<br>
+  <div class="slideshow-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="{% static "slides/slide-1.jpg" %}  " alt="Prabhas">
+            <div class="caption">Savor every bite, life’s too short!</div>
+        </div>
+        <div class="slide">
+            <img src="{% static "slides/slide2.jpg" %}" alt="NTR Jr">
+            <div class="caption">Food is love served on a plate</div>
+        </div>
+        <div class="slide">
+            <img src="{% static "slides/slide-3.jpg" %}" alt="Allu Arjun">
+            <div class="caption">Taste the joy in every flavor.</div>
+        </div>
+        <div class="slide">
+            <img src="{% static "slides/slide-4.jpg" %}" alt="Ram Charan">
+            <div class="caption">A meal shared is happiness doubled.</div>
+        </div>
+        <div class="slide">
+            <img src="{% static "slides/slide-5.webp" %}" alt="Vijay Devarakonda">
+            <div class="caption">Good food, good mood, always</div>
+        </div>
+    </div>
+    
+    <button class="nav-button prev" id="prevBtn">❮</button>
+    <button class="nav-button next" id="nextBtn">❯</button>
+</div>
+
+  <div class="food-section">
+    <h2>🍳 Popular Food Items</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <img src="{% static "image/ind_pic/Pizza.webp" %}" alt="Pizza" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Margherita Pizza</h3>
+          <p>₹199</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/ind_pic/Burger.jpeg" %}" alt="Burger" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Cheese Burger</h3>
+          <p>₹149</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/wedge/noodels.jpg" %}" alt="Noodles" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Veg Noodles</h3>
+          <p>₹129</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/wedge/caesar-salad.jpg" %}" alt="Salad" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Caesar Salad</h3>
+          <p>₹179</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/non_wedge/egg_biriyani.jpeg" %}" alt="Biryani" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Egg Biryani</h3>
+          <p>₹229</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/non_wedge/kodi.jpeg" %}" alt="Chicken Fry" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Chicken Fry</h3>
+          <p>₹249</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/non_wedge/onion_non_veg.jpeg" %}" alt="Onion Chicken" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Onion Chicken</h3>
+          <p>₹189</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/wedge/french_frys.webp" %}" alt="Onion Chicken" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>French Frys</h3>
+          <p>₹99</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/wedge/tomato_pasta.webp" %}" alt="Onion Chicken" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Tomato Pasta</h3>
+          <p>₹109</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="{% static "image/snacks/cherry.avif" %} " alt="Cherry Pie" onclick="window.location.href='{% url "order" %}'" style="cursor: pointer;">
+        <div class="food-details">
+          <h3>Cherry Pie</h3>
+          <p>₹99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock  %}

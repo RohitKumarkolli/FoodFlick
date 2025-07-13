@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<main>
+    <form id="loginForm">
+      <h2>Welcome Back 👋</h2>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" required>
+      <button type="submit" onclick="window.location.href='{% url "dashboard" %}'">Login</button>
+      <p>Don't have an account? <a href="{% url "signup" %}" target="mainFrame">Sign up here</a></p>
+    </form>
+    
+  </main>
+
+{% endblock  %}

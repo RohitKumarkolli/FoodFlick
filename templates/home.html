@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <section class="hero" style="background-image: url('{% static "image/ind_pic/background.jpg" %} '); background-size: cover; background-position: center; padding: 60px 20px; color: white;">
+    <div class="hero-content">
+      <h1>Delicious food delivered to your door</h1>
+      <p>Explore top-rated restaurants near you and get your cravings satisfied in minutes.</p>
+      <button onclick="window.location.href='{% url "login" %}'">Order Now</button>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2 class="animated-heading">Why FoodFlick?</h2>
+    <div class="feature-grid">
+
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">Fast Delivery</div>
+          <div class="flip-back">
+            Meals delivered in under 30 minutes and our delivery system is powered by AI to optimize routes your food arrives just the way it left the kitchen. We make sure it gets to you on time.
+          </div>
+        </div>
+      </div>
+  
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">Rating</div>
+          <div class="flip-back">
+            We’ve handpicked restaurants based on user reviews, hygiene and excellence. From gourmet delicacies to street food favorites because you deserve the best every time you order.
+          </div>
+          
+        </div>
+      </div>
+  
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">Special Offers</div>
+          <div class="flip-back">
+            Who doesn’t love a good deal? With FoodFlick, you get access to app-only coupons, festive discounts and  points. We make sure your meals are light on your wallet but heavy on satisfaction.
+          </div>
+          
+        </div>
+      </div>
+  
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">Live Tracking</div>
+          <div class="flip-back">
+            With our real-time tracking system, you can monitor your meal’s journey from the restaurant kitchen to your front door. Get delivery partner details, and even a live map one seamless interface.
+          </div>
+          
+        </div>
+      </div>
+  
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">24/7 Service</div>
+          <div class="flip-back">
+            We’re here to help anytime — day or night. Our customer support team is trained to resolve issues swiftly through live chat, email, or phone. We’ve got your back 24/7.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="restaurants">
+    <h2>Popular Items</h2>
+    <div class="restaurant-grid">
+      <div class="restaurant-card">
+        <img src="{% static "image/ind_pic/Pizza.webp" %} "alt="Pizza Place" />
+        <h3>Pizza Spot</h3>
+        <p>4.5 ★ | Italian, Fast Food</p>
+      </div>
+      <div class="restaurant-card">
+        <img src="{% static "image/ind_pic/Burger.jpeg" %}" alt="Burger Joint" />
+        <h3>Burger Hub</h3>
+        <p>4.3 ★ | Burgers, American</p>
+      </div>
+      <div class="restaurant-card">
+        <img src="{% static "image/ind_pic/chicken.jpeg" %} " alt="Sushi House" />
+        <h3>Chicken World</h3>
+        <p>4.7 ★ | South Korea, Seoul</p>
+      </div>
+      <div class="restaurant-card">
+        <img src="{% static "image/ind_pic/pulav.jpg" %}" alt="Sushi House" />
+        <h3>Zafrani Pulao</h3>
+        <p>4.6 ★ | India, Kashmir </p>
+      </div><div class="restaurant-card">
+        <img src="{% static "image/ind_pic/chicken-birayani.webp" %}" alt="Sushi House" />
+        <h3>Sushi World</h3>
+        <p>4.5 ★ | India , Hyderabad</p>
+      </div><div class="restaurant-card">
+        <img src="{% static "image/ind_pic/momos.jpeg" %}" alt="Sushi House" />
+        <h3>Sushi World</h3>
+        <p>4.8 ★ | Nepal, Kathmandu</p>
+      </div>
+      <div class="restaurant-card">
+        <img src="{% static "image/ind_pic/chapati.jpg" %}" alt="Sushi House" />
+        <h3>Pulav place</h3>
+        <p>4.3 ★ | India, Punjab</p>
+    </div>
+    <div class="restaurant-card">
+        <img src="{% static "image/ind_pic/fry-curry.jpeg" %}" alt="Sushi House" />
+        <h3>Pulav place</h3>
+        <p>4.4 ★ | Sri Lanka, Spicy Curry</p>
+  </section>
+{% endblock  %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/find.css' %}">
+  <title>Food Flick - Search</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+    <button class="back-btn" onclick="window.location.href='{% url "dashboard" %}'">← Back</button>
+      <h1>Food Flick</h1>
+    </div>
+  </header>
+
+  <main>
+    <!-- Restaurant Search -->
+    <section class="search-section">
+      <h2>Search Restaurants</h2>
+      <input type="text" id="restaurantSearch" placeholder="Search for restaurants..." onkeyup="searchRestaurants()">
+      <div id="restaurantResults" class="results-container"></div>
+    </section>
+
+    <!-- Food Item Search -->
+    <section class="search-section">
+      <h2>Search Food Items</h2>
+      <input type="text" id="foodSearch" placeholder="Search for food items..." onkeyup="searchFoodItems()">
+      <div id="foodResults" class="results-container"></div>
+    </section>
+  </main>
+
+  <script src="{% static 'js/search.js' %}"></script>
+
+</body>
+</html>

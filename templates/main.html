@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard - FoodFlick</title>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+
+  <div class="top-nav">
+    <button class="menu-btn" onclick="toggleDropdown()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+    <h2 style="color: white" class='logo-title'>FoodFlick</h2>
+
+    <div class="top-icons">   
+      <form action="{% url "search" %}" method="get" class="search-form">
+        <button type="submit" onclick="window.location.href='{% url "search" %}'" >🔍</button>
+      </form>
+      <a href="{% url "dashboard" %}">Home</a>
+      <a href="{% url "cart" %}">Cart</a>
+      <div class="profile-icon" onclick="window.location.href='{% url "profile" %}'"></div>
+    </div>
+  </div>
+
+  <div id="menuDropdown" class="dropdown">
+    <a href="{% url "profile" %}">👤 Profile</a>
+    <a href="{% url "rating" %}">⭐ Rating</a>
+    <a href="{% url "settings" %}">⚙️ Settings</a>
+    <a href="{% url "about" %}">❗ About</a>
+    <a href="{% url "home" %}">🚪 Logout</a>
+  </div>
+{% block details %}{% endblock details %}
+  <footer>
+    <p>© 2025 FoodFlick. All rights reserved.</p>
+  </footer>
+  <script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById("menuDropdown");
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+  }
+
+  window.onclick = function(e) {
+    const dropdown = document.getElementById("menuDropdown");
+    if (!e.target.closest('.menu-btn') && !e.target.closest('.profile-icon')) {
+      dropdown.style.display = "none";
+    }
+  };
+</script>
+</body>
+</html>
