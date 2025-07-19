@@ -1,0 +1,12 @@
+django
+pandas
+numpy
+requests
+django-cors-headers
+django-environ
+django-rest-framework
+django-filter
+django-extensions
+django-debug-toolbar
+djangorestframework-simplejwt
+django-storages
